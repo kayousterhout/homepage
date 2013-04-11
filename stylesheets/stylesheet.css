@@ -58,10 +58,10 @@ body {
 }
 
 a {
-  color: #d5000d;
+  color: #293D5E;
 }
 a:hover {
-  color: #c5000c;
+  color: #3F818D;
 }
 
 header {
@@ -70,7 +70,7 @@ header {
 }
 
 header h1 {
-  font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, serif; font-weight: 900;
+  font-family: 'Syncopate', 'Helvetica Neue', Helvetica, Arial, serif; font-weight: 900;
   letter-spacing: -1px;
   font-size: 48px;
   color: #303030;
@@ -253,7 +253,8 @@ h2 {
 } 
 
 h3 {
-  color: #d5000d;
+  /*color: #d5000d;*/
+  color: #293D5E;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;

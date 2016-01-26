@@ -3,7 +3,9 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='http://fonts.googleapis.com/css?family=Syncopate:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Syncopate:400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
@@ -38,7 +40,7 @@
         <h1>Kay Ousterhout</h1>
         </header>
 
-        <h4>keo (at) cs (dot) berkeley (dot) edu &middot; 419 Soda Hall</h4>
+        <p>keo (at) cs (dot) berkeley (dot) edu &middot; 419 Soda Hall</p>
 <!--
         <section id="links">
         <table style="border:0px">
@@ -73,13 +75,20 @@
         <section id="main_content">
         <h3>About</h3>
 
-	<p>I am a second year Ph.D. student in the <a href="http://www.berkeley.edu">UC Berkeley</a>
+	<p>I am a Ph.D. student in the <a href="http://www.berkeley.edu">UC Berkeley</a>
           <a href="http://netsys.cs.berkeley.edu/">NetSys Lab</a>, advised by
           <a href="http://www.eecs.berkeley.edu/~sylvia/">Sylvia Ratnasamy</a>.
           I am broadly interested in networking, computer systems, and cloud computing. My current research centers
           around supporting lower latency in compute clusters. I am interested in scalable cluster scheduling that
           can handle the high task turnover rate of sub-second tasks, and in the performance benefits of using short
           tasks for all jobs (even long-running batch jobs).
+        </p>
+
+        <p>
+          Recently, I have worked on characterizing the performance of large-scale data analytics frameworks like
+          Spark.  A project page for that work is available <a href="http://kayousterhout.github.io/trace-analysis/">here</a>;
+          that page includes links to some detailed traces we collected as well as information about a performance
+          visualization tool we developed.
         </p>
 
         <p>
@@ -98,16 +107,68 @@
 
         <h3 id="projects">Publications</h3>
 
+        <p><a href="publications/nsdi15-final147.pdf">Making Sense of Performance in Data Analytics Frameworks</a></br>
+          Kay Ousterhout, Ryan Rasti, Sylvia Ratnasamy, Scott Shenker, Byung-Gon Chun</br>
+          NSDI 2015
+        </p>
+
+        <p><a href="http://dl.acm.org/ft_gateway.cfm?id=2522716">Sparrow: Distributed, Low Latency Scheduling</a></br>
+          Kay Ousterhout, Patrick Wendell, Matei Zaharia, Ion Stoica</br>
+          SOSP 2013
+        </p>
+
         <p><a href="publications/hotos13-final24.pdf">The Case for Tiny Tasks in Compute Clusters</a></br>
           Kay Ousterhout, Aurojit Panda, Joshua Rosen, Shivaram Venkataraman, Reynold Xin, Sylvia Ratnasamy,
           Scott Shenker, Ion Stoica</br>
-          HotOS 2013 (to appear)
+          HotOS 2013
         </p>
 
         <p><a href="http://www.eecs.berkeley.edu/Pubs/TechRpts/2013/EECS-2013-29.html">Sparrow: Scalable Scheduling for Sub-Second Parallel Jobs</a></br>
           Kay Ousterhout, Patrick Wendell, Matei Zaharia, Ion Stoica</br>
           UC Berkeley EECS 2013
         </p>
+
+        <hr>
+
+        <h3 id="talks">Talks</h3>
+
+        <p><em>Making Sense of Spark Performance</em> at <a href="https://spark-summit.org/2015">Spark Summit 2015</a>
+          <a href="talks/2015_06_15_SparkSummit_MakingSense.pdf">pdf</a>
+          <a href="talks/2015_06_15_SparkSummit_MakingSense.pptx">pptx</a>
+        </p>
+
+        <p><em>Making Sense of Performance in Data Analytics Frameworks</em> at NSDI 2015
+          <a href="talks/2015_05_05_NSDI_MakingSense.pdf">pdf</a>
+          <a href="talks/2015_05_05_NSDI_MakingSense.pptx">pptx</a>
+        </p>
+
+        <p><em>Making Sense of Spark Performance</em> O'Reilly Webcast
+          <a href="talks/2015_04_01_OReilly_Webcast.pdf">pdf</a>
+          <a href="talks/2015_04_01_OReilly_Webcast.pptx">pptx</a>
+          <a href="http://www.oreilly.com/pub/e/3330">webcast</a>
+        </p>
+
+        <p><em>Next-Generation Spark Scheduling with Sparrow</em> at Spark Summit 2013
+          <a href="talks/sparrow-spark-summit-talk.pdf">pdf</a>
+          <a href="talks/sparrow-spark-summit-talk.pptx">pptx</a>
+          <a href="https://www.youtube.com/watch?v=ayjH_bG-RC0">video</a>
+        </p>
+
+        <p><em>Sparrow: Distributed, Low Latency Scheduling</em> at SOSP 2013
+           <a href="talks/sparrow-sosp-talk.pdf">pdf</a>
+           <a href="talks/sparrow-sosp-talk.pptx">pptx</a>
+           <a href="https://www.youtube.com/watch?v=A4k0WqjUY9A">video</a>
+        </p>
+
+
+        <p><em>The Case for Tiny Tasks in Compute Clusters</em> at HotOS 2013
+           <a href="talks/tinytasks-hotos-talk.pdf">pdf</a>
+           <a href="talks/tinytasks-hotos-talk.pptx">pptx</a>
+        </p>
+
+        <h3 id="teaching">Teaching</h3>
+
+        I am currently a TA for CS61B.  If you're a student in my section and you're looking a list of the weekly tips, they're available <a href=http://kayousterhout.github.io/61b/>here</a>.
 
 <!--
         <h3 id="contact">Contact</h3>
@@ -119,7 +180,7 @@
         </section>
 -->
         <footer>
-        This page was created using <a href="http://pages.github.com">GitHub Pages</a>, based on Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>, and with modifications by <a href="http://shivaram.info/">Shivaram Venkataraman</a>.
+        This page was created using <a href="http://pages.github.com">GitHub Pages</a>, based on Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>, and with modifications egregiously stolen from <a href="http://shivaram.info/">Shivaram Venkataraman</a>.
         </footer>
 
       </div>

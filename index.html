@@ -33,9 +33,8 @@
       <div class="inner">
 
 	<div style="padding-top:35px; float:right; margin:0;">
-		<img alt="Kay Ousterhout" src="kay.jpg"/>
+		<img alt="Kay Ousterhout" src="images/kay_ousterhout.jpg" width="180"/>
 	</div>
-
         <header>
         <h1>Kay Ousterhout</h1>
         </header>
@@ -78,24 +77,21 @@
 	<p>I am a Ph.D. student in the <a href="http://www.berkeley.edu">UC Berkeley</a>
           <a href="http://netsys.cs.berkeley.edu/">NetSys Lab</a>, advised by
           <a href="http://www.eecs.berkeley.edu/~sylvia/">Sylvia Ratnasamy</a>.
-          I am broadly interested in networking, computer systems, and cloud computing. My current research centers
-          around supporting lower latency in compute clusters. I am interested in scalable cluster scheduling that
-          can handle the high task turnover rate of sub-second tasks, and in the performance benefits of using short
-          tasks for all jobs (even long-running batch jobs).
+          I am broadly interested in networking, computer systems, and cloud computing. My PhD thesis work focuses
+          on understanding performance in data analytics frameworks.
         </p>
 
         <p>
-          Recently, I have worked on characterizing the performance of large-scale data analytics frameworks like
-          Spark.  A project page for that work is available <a href="http://kayousterhout.github.io/trace-analysis/">here</a>;
-          that page includes links to some detailed traces we collected as well as information about a performance
-          visualization tool we developed.
+        I am also a committer and PMC member for Apache Spark.  My work on Spark has focused on improving scheduler performance, and I currently help maintain and review pull requests for the scheduler code.
         </p>
 
-        <p>
-          I am supported by a <a href="http://www.hertzfoundation.org">Hertz Foundation Graduate Fellowship</a>, a
+               <p>
+          I am currently supported by a
+          <a href="https://research.googleblog.com/2016/03/announcing-2016-google-phd-fellows-for.html">Google PhD Fellowship</a>.
+          In the past, I was supported by a <a href="http://www.hertzfoundation.org">Hertz Foundation Graduate Fellowship</a>, a
           UC Berkeley Chancellor's Fellowship, and a
           <a href="http://www.google.com/anitaborg/us/">Google Anita Borg Memorial Scholarship</a>.
-        </p>
+                 </p>
 
 	<p>I graduated from <a href="http://www.princeton.edu">Princeton University</a> in 2011 with a B.S.E. in
           Computer Science. At Princeton, I was advised by
@@ -105,7 +101,41 @@
 
         <hr>
 
+        <h3> Thesis Work </h3>
+ 
+        <p>
+          The first component of my thesis work focused on characterizing the performance
+          of large-scale data analytics frameworks like Spark.  As part of that project, I added instrumentation
+          to Spark to measure how much time is spent doing network and disk I/O.  Most of that instrumentation is
+          now part of Spark, and can be visualized in the Spark UI by clicking the "Event Timeline" link on the
+          stage detail page.  More information about that project is available
+          <a href="http://kayousterhout.github.io/trace-analysis/">here</a>;
+          that page includes links to some detailed traces we collected.
+        </p>
+
+        <p>
+          One takeaway from my work measuring performance in current systems is that today's systems make it
+          difficult to reason about performance.  In Spark, for example, pervasive pipelining and parallelism
+          make it difficult (even with extensive instrumentation and metrics) for users to model performance
+          and understand how changing the software or hardware configuration would impact performance.
+          Today's users have many choices in how to configure their workloads (e.g., what type of EC2 instance
+          should they use to run their job?); without the ability to reason about performance, they cannot
+          configure for the best performance. My current research focuses on a new system, Monotasks, that
+          we've designed with the singular goal of making it easy for users to reason about performance.
+          Monotasks is a replacement for the execution layer of Apache Spark, and is fully API-compatible with
+          Spark. For more information about monotasks, refer to my talk at Spark Summit 2016 (linked below).
+        </p>
+
+
+        <hr>
+
         <h3 id="projects">Publications</h3>
+
+        <p>
+          Performance clarity as a first-class design principle</br>
+          Kay Ousterhout, Christopher Canel, Max Wolffe, Sylvia Ratnasamy, Scott Shenker</br>
+          HotOS 2017 (to appear)
+        </p>
 
         <p><a href="publications/nsdi15-final147.pdf">Making Sense of Performance in Data Analytics Frameworks</a></br>
           Kay Ousterhout, Ryan Rasti, Sylvia Ratnasamy, Scott Shenker, Byung-Gon Chun</br>
@@ -123,23 +153,34 @@
           HotOS 2013
         </p>
 
+<!--
         <p><a href="http://www.eecs.berkeley.edu/Pubs/TechRpts/2013/EECS-2013-29.html">Sparrow: Scalable Scheduling for Sub-Second Parallel Jobs</a></br>
           Kay Ousterhout, Patrick Wendell, Matei Zaharia, Ion Stoica</br>
           UC Berkeley EECS 2013
         </p>
+-->
 
         <hr>
 
         <h3 id="talks">Talks</h3>
 
+        <p><em>Re-Architecting Apache Spark for Performance Understandability</em> at <a href="https://spark-summit.org/2016">Spark Summit 2016</a>
+          <a href="talks/2016_06_07_SparkSummit_ReArchitecting.pdf">pdf</a>
+          <a href="talks/2016_06_07_SparkSummit_ReArchitecting.pptx">pptx</a>
+          <a href="https://www.youtube.com/watch?v=L-KAZxNSfp4">video</a>
+        </p>
+
+
         <p><em>Making Sense of Spark Performance</em> at <a href="https://spark-summit.org/2015">Spark Summit 2015</a>
           <a href="talks/2015_06_15_SparkSummit_MakingSense.pdf">pdf</a>
           <a href="talks/2015_06_15_SparkSummit_MakingSense.pptx">pptx</a>
+          <a href="https://www.youtube.com/watch?v=mBk4tt7AEHU">video</a>
         </p>
 
         <p><em>Making Sense of Performance in Data Analytics Frameworks</em> at NSDI 2015
           <a href="talks/2015_05_05_NSDI_MakingSense.pdf">pdf</a>
           <a href="talks/2015_05_05_NSDI_MakingSense.pptx">pptx</a>
+          <a href="https://www.usenix.org/node/188989">video</a>
         </p>
 
         <p><em>Making Sense of Spark Performance</em> O'Reilly Webcast
@@ -170,7 +211,15 @@
 
         <h3 id="teaching">Teaching</h3>
 
-        I am currently a TA for CS61B.  If you're a student in my section and you're looking a list of the weekly tips, they're available <a href=http://kayousterhout.github.io/61b/>here</a>.
+        <p>
+         In the 2016 Spring Semester, I was a TA for CS61B.  As part of my work as a TA, I wrote the <a href="http://cs61b.ug/sp16/materials/proj/proj2/proj2.html">Editor Project</a>.
+         I also maintained a list of weekly programming tips that are available <a href=http://kayousterhout.github.io/61b/>here</a>.
+        </p>
+
+        <p>
+        I also developed the course materials for the "Scaling Up Analytics" portion of the <a href="http://amplab.github.io/datascience-sp14/">Spring 2014 Introduction to Data Science</a> course,
+        including a <a href="http://nbviewer.jupyter.org/github/amplab/datascience-sp14/blob/master/lab8/lab8-withsolutions.ipynb">lab on how Apache Spark works</a>.
+        </p>
 
 <!--
         <h3 id="contact">Contact</h3>
